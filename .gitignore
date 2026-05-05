@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Office lockfiles
+~$*
+
+# IDE / editor configs
+.idea/
+.vscode/
+*.iml
+
+# Quarto / R build artifacts
+_freeze/
+_site/
+.Rproj.user/
+.Rhistory
+
+# Node / build artifacts (vendored libs no necesitan estos checkeados)
+node_modules/
+package-lock.json
+yarn.lock
+.npm/
+
+# Logs
+*.log
