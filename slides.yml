@@ -1,0 +1,172 @@
+# slides.yml — manifiesto del hub de presentaciones
+#
+# Fuente de verdad de los metadatos que muestra index.html.
+# Lo escribe /slides al publicar y se puede editar a mano.
+# Regenerar el hub:  python3 ~/.claude/commands/slides_assets/build_index.py
+#
+# Campos por entrada:
+#   slug      (obligatorio) identificador; carpeta en decks/ o nombre del archivo legacy
+#   title     (obligatorio) título que se muestra en el hub
+#   date      YYYY-MM-DD de la presentación
+#   kind      charla | conferencia | seminario | clase | policy | propuesta | otro
+#   event     dónde se presentó (institución, congreso, curso)
+#   lang      es | en
+#   html      ruta relativa al HTML navegable (opcional)
+#   pdf       ruta relativa al PDF descargable (opcional)
+#   pptx      ruta relativa al PPTX descargable (opcional)
+#   tags      lista de etiquetas temáticas
+#   featured  true para destacarla arriba del hub
+#   hidden    true para no listarla (el archivo sigue accesible por URL)
+#   note      una línea de contexto que se muestra bajo el título
+#
+# Un archivo publicado que no tenga ficha aquí igual aparece en el hub con
+# metadatos derivados del disco. Correr con --seed le escribe su ficha.
+
+presentations:
+- slug: comfamiliar_florece
+  title: FLORECE — Sistema de Monitoreo
+  date: '2026-05-05'
+  kind: propuesta
+  event: Comfamiliar Risaralda
+  lang: es
+  html: comfamiliar_florece.html
+  tags:
+  - monitoreo y evaluación
+  - desarrollo territorial
+- slug: Seminario_Visualization
+  title: Seminario de Investigación — Visualización
+  date: '2022-05-07'
+  kind: seminario
+  event: Universidad EAFIT
+  lang: es
+  html: Seminario_Visualization.html
+- slug: Seminario_Etica
+  title: Seminario de Investigación — Ética
+  date: '2022-05-07'
+  kind: seminario
+  event: Universidad EAFIT
+  lang: es
+  html: Seminario_Etica.html
+- slug: Resultados_RAP
+  title: Resultados RAP
+  date: '2019-10-08'
+  kind: otro
+  lang: es
+  pdf: Resultados_RAP.pdf
+- slug: Clase_4_Mcdo_Laboral
+  title: Clase 4 — Mercado laboral
+  date: '2019-10-08'
+  kind: clase
+  lang: es
+  pptx: Clase_4_Mcdo_Laboral.pptx
+- slug: Antioquia
+  title: Antioquia
+  date: '2019-09-25'
+  kind: otro
+  lang: es
+  pdf: Antioquia.pdf
+- slug: inflacion
+  title: Inflación
+  date: '2019-08-20'
+  kind: otro
+  lang: es
+  pptx: inflacion.pptx
+- slug: venezuela
+  title: Venezuela
+  date: '2019-08-13'
+  kind: otro
+  lang: es
+  pdf: venezuela.pdf
+  pptx: venezuela.pptx
+- slug: lecture_5
+  title: GIS for Applied Economics — Lecture 5
+  date: '2019-07-18'
+  kind: clase
+  event: GIS for Applied Economics
+  lang: en
+  html: lecture_5.html
+  pdf: pdfs/lecture_5.pdf
+- slug: hist
+  title: Hist
+  date: '2019-07-18'
+  kind: otro
+  lang: es
+  pdf: hist.pdf
+- slug: Seminario_Alternativo
+  title: Seminario de Investigación — Métodos alternativos
+  date: '2019-07-18'
+  kind: seminario
+  event: Universidad EAFIT
+  lang: es
+  html: Seminario_Alternativo.html
+- slug: Part_3
+  title: GIS for Applied Economics — Parte 3
+  date: '2019-07-18'
+  kind: clase
+  event: GIS for Applied Economics
+  lang: en
+  html: Part_3.html
+- slug: Part_2
+  title: GIS for Applied Economics — Parte 2
+  date: '2019-07-18'
+  kind: clase
+  event: GIS for Applied Economics
+  lang: en
+  html: Part_2.html
+- slug: Part_1
+  title: GIS for Applied Economics — Parte 1
+  date: '2019-07-18'
+  kind: clase
+  event: GIS for Applied Economics
+  lang: en
+  html: Part_1.html
+- slug: Clase_1_equipos
+  title: Clase 1 — Equipos
+  date: '2019-07-18'
+  kind: clase
+  lang: es
+  pptx: Clase_1_equipos.pptx
+- slug: Clase_1
+  title: Clase 1
+  date: '2019-07-18'
+  kind: clase
+  lang: es
+  pptx: Clase_1.pptx
+- slug: Lecture_01
+  title: Economic Growth and Development — Lecture 1
+  date: '2019-07-17'
+  kind: clase
+  event: Economic Growth and Development
+  lang: en
+  html: Lecture_01.html
+- slug: 2018_ids_members
+  title: Reassessing Economic Inequality and Development
+  date: '2018-12-05'
+  kind: charla
+  event: Institute of Development Studies, Sussex
+  lang: en
+  html: 2018_ids_members.html
+- slug: lecture_4
+  title: Lecture 4
+  date: '2018-12-04'
+  kind: clase
+  lang: en
+  pdf: pdfs/lecture_4.pdf
+- slug: lecture_3
+  title: Lecture 3
+  date: '2018-12-04'
+  kind: clase
+  lang: en
+  pdf: pdfs/lecture_3.pdf
+- slug: lecture_2
+  title: Lecture 2
+  date: '2018-12-04'
+  kind: clase
+  lang: en
+  pdf: pdfs/lecture_2.pdf
+- slug: lecture_1
+  title: Lecture 1
+  date: '2018-12-04'
+  kind: clase
+  lang: en
+  pdf: pdfs/lecture_1.pdf

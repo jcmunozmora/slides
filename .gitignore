@@ -24,3 +24,6 @@ yarn.lock
 
 # Logs
 *.log
+
+# Playwright MCP
+.playwright-mcp/

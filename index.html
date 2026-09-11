@@ -3,108 +3,393 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Slides — Juan Carlos Muñoz Mora</title>
-<meta name="description" content="Repositorio de presentaciones académicas y profesionales">
+<title>Presentaciones — Juan Carlos Muñoz-Mora</title>
+<meta name="description" content="Hub de presentaciones de Juan Carlos Muñoz-Mora: charlas, clases, seminarios y documentos de política. Abrir en el navegador o descargar el PDF.">
+<meta name="author" content="Juan Carlos Muñoz-Mora">
+<meta property="og:title" content="Presentaciones — Juan Carlos Muñoz-Mora">
+<meta property="og:description" content="Charlas, clases, seminarios y documentos de política.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Crect x='5' y='8' width='22' height='12' fill='%23fff'/%3E%3Ccircle cx='24' cy='25' r='3' fill='%23146AEF'/%3E%3C/svg%3E">
 <style>
-  :root {
-    --fg:#1f1f1f; --muted:#6b6b6b; --accent:#159957; --bg:#fff; --line:#e5e5e5;
+:root{
+  --ink:#171717; --ink-2:#404040; --muted:#666666;
+  --line:#D5D7D8; --soft:#F6F6F6; --bg:#FFFFFF;
+  --accent:#146AEF; --accent-dark:#0A4ECF;
+  --method:#0D7377; --territory:#2D6A4F;
+  --sans:"Inter Tight","Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  --mono:"JetBrains Mono","IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --ink:#F2F2F2; --ink-2:#C8C8C8; --muted:#8A8A8A;
+    --line:#2A2A2A; --soft:#151515; --bg:#0A0A0A;
+    --accent:#4B8DFF; --accent-dark:#7FB0FF;
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    color: var(--fg); background: var(--bg); line-height: 1.5;
-  }
-  header {
-    background: linear-gradient(120deg, #155799, #159957);
-    color: #fff; padding: 3rem 1.5rem 2.25rem; text-align: center;
-  }
-  header h1 { margin: 0 0 .4rem; font-size: 2.25rem; font-weight: 600; letter-spacing: -.01em; }
-  header p  { margin: 0; opacity: .92; font-size: 1rem; }
-  main { max-width: 880px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
-  h2 {
-    margin: 2.25rem 0 .5rem; padding-bottom: .35rem;
-    border-bottom: 1px solid var(--line);
-    font-size: 1.05rem; color: var(--muted); font-weight: 600;
-    letter-spacing: .04em; text-transform: uppercase;
-  }
-  ul { list-style: none; padding: 0; margin: 0; }
-  li {
-    padding: .7rem 0; border-bottom: 1px dotted var(--line);
-    display: flex; align-items: baseline; gap: .9rem; flex-wrap: wrap;
-  }
-  li:last-child { border-bottom: none; }
-  li time {
-    font-variant-numeric: tabular-nums; color: var(--muted);
-    font-size: .82rem; min-width: 6rem; flex: 0 0 auto;
-  }
-  li a { color: var(--accent); text-decoration: none; flex: 1 1 auto; min-width: 0; }
-  li a:hover { text-decoration: underline; }
-  .badge {
-    font-size: .65rem; text-transform: uppercase; padding: .15rem .55rem;
-    border-radius: 999px; background: #f0f0f0; color: var(--muted);
-    letter-spacing: .06em; flex: 0 0 auto;
-  }
-  .badge.html { background: #e7f5ee; color: #0a7c46; }
-  .badge.pdf  { background: #fdebec; color: #a8323a; }
-  .badge.pptx { background: #fff3e0; color: #b8551a; }
-  footer {
-    text-align: center; color: var(--muted); font-size: .8rem;
-    padding: 1.5rem; border-top: 1px solid var(--line);
-  }
-  footer a { color: var(--muted); }
-  @media (max-width: 540px) {
-    header { padding: 2rem 1rem 1.75rem; }
-    header h1 { font-size: 1.75rem; }
-    li time { min-width: 5rem; font-size: .78rem; }
-  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);
+     line-height:1.5;font-size:16px}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+header.hero{border-bottom:3px solid var(--ink);padding-block:3rem 1.75rem}
+.wrap{max-width:900px;margin:0 auto;padding-inline:1.25rem}
+.eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
+         text-transform:uppercase;color:var(--muted);margin:0 0 .6rem}
+h1{margin:0 0 .5rem;font-size:clamp(2rem,6vw,3rem);font-weight:700;
+   letter-spacing:-.03em;line-height:1.05}
+h1 .dot{color:var(--accent)}
+.lede{margin:0;max-width:46ch;color:var(--ink-2);font-size:1.02rem}
+.hero-links{margin-top:1.1rem;font-family:var(--mono);font-size:.78rem;
+            display:flex;gap:1.1rem;flex-wrap:wrap}
+.hero-links a{color:var(--muted);border-bottom:1px solid var(--line);text-decoration:none}
+.hero-links a:hover{color:var(--accent);border-color:var(--accent)}
+
+.controls{position:sticky;top:0;z-index:20;background:var(--bg);
+          border-bottom:1px solid var(--line);padding-block:.85rem}
+.controls .wrap{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
+#q{flex:1 1 15rem;min-width:0;padding:.6rem .85rem;font:inherit;font-size:.92rem;
+   color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:2px}
+#q:focus{outline:2px solid var(--accent);outline-offset:1px;background:var(--bg)}
+.chips{display:flex;gap:.4rem;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;
+      padding:.4rem .7rem;border:1px solid var(--line);background:transparent;color:var(--muted);
+      border-radius:999px;cursor:pointer}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+
+main{padding-block:1rem 4rem}
+section.year{margin-top:2.25rem}
+section.year > h2{margin:0 0 .35rem;font-family:var(--mono);font-size:.78rem;
+   letter-spacing:.16em;color:var(--muted);font-weight:500;
+   border-bottom:1px solid var(--line);padding-bottom:.45rem}
+
+.card{display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap;
+      padding:1.05rem 0;border-bottom:1px dotted var(--line)}
+.card:last-child{border-bottom:none}
+.card .when{font-family:var(--mono);font-size:.76rem;color:var(--muted);
+            flex:0 0 5.5rem;padding-top:.2rem;font-variant-numeric:tabular-nums}
+.card .body{flex:1 1 18rem;min-width:0}
+.card h3{margin:0 0 .25rem;font-size:1.06rem;font-weight:600;letter-spacing:-.01em;
+         line-height:1.3}
+.card h3 a{color:var(--ink)}
+.card h3 a:hover{color:var(--accent);text-decoration:none}
+.card .meta{margin:0;font-size:.84rem;color:var(--muted)}
+.card .meta .kind{color:var(--accent);font-family:var(--mono);font-size:.7rem;
+                  letter-spacing:.08em;text-transform:uppercase}
+.card .note{margin:.35rem 0 0;font-size:.86rem;color:var(--ink-2)}
+.card .tags{margin:.4rem 0 0;font-family:var(--mono);font-size:.68rem;color:var(--muted);
+            letter-spacing:.05em}
+.card.featured{border-left:3px solid var(--accent);padding-left:.9rem;
+               margin-left:-.9rem;background:var(--soft)}
+
+.actions{display:flex;gap:.45rem;flex-wrap:wrap;flex:0 0 auto;padding-top:.15rem}
+.btn{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;
+     padding:.45rem .8rem;border:1px solid var(--line);border-radius:2px;
+     color:var(--ink-2);white-space:nowrap}
+.btn:hover{text-decoration:none;border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-dark);border-color:var(--accent-dark);color:#fff}
+
+.empty{display:none;padding:3rem 0;color:var(--muted);font-size:.95rem}
+.empty.on{display:block}
+footer{border-top:1px solid var(--line);padding-block:1.5rem 3rem;
+       font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+footer p{margin:0 0 .3rem}
+@media (max-width:560px){
+  header.hero{padding-block:2rem 1.25rem}
+  .card .when{flex-basis:100%;padding-top:0}
+  .actions{flex-basis:100%}
+}
 </style>
 </head>
 <body>
-<header>
-  <h1>Slides</h1>
-  <p>Presentaciones de Juan Carlos Muñoz Mora · Universidad EAFIT</p>
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Juan Carlos Muñoz-Mora · Universidad EAFIT</p>
+    <h1>Presentaciones<span class="dot">.</span></h1>
+    <p class="lede">Charlas, clases, seminarios y documentos de política.
+       Cada entrada se abre en el navegador o se descarga en PDF.</p>
+    <nav class="hero-links">
+      <a href="https://jcmunozmora.github.io/">Sitio personal</a>
+      <a href="https://github.com/jcmunozmora/slides">Repositorio</a>
+      <a href="https://scholar.google.com/citations?user=8bXfJZoAAAAJ">Google Scholar</a>
+    </nav>
+  </div>
 </header>
+
+<div class="controls">
+  <div class="wrap">
+    <input id="q" type="search" aria-label="Buscar presentaciones"
+           placeholder="Buscar por título, evento o tema…  (tecla /)"
+           autocomplete="off" spellcheck="false">
+    <div class="chips"><button class="chip" data-kind="all" aria-pressed="true">Todas</button>
+<button class="chip" data-kind="charla" aria-pressed="false">Charla</button>
+<button class="chip" data-kind="seminario" aria-pressed="false">Seminario</button>
+<button class="chip" data-kind="clase" aria-pressed="false">Clase</button>
+<button class="chip" data-kind="propuesta" aria-pressed="false">Propuesta</button>
+<button class="chip" data-kind="otro" aria-pressed="false">Otro</button></div>
+  </div>
+</div>
+
 <main>
-<h2>2026</h2>
-<ul>
-  <li><time datetime="2026-05-05T06:12:55-05:00">2026-05-05</time><a href="comfamiliar_florece.html">FLORECE</a><span class="badge html">HTML</span></li>
-</ul>
-<h2>2022</h2>
-<ul>
-  <li><time datetime="2022-05-07T07:29:46-05:00">2022-05-07</time><a href="Seminario_Visualization.html">Seminario Investigación - Sesión 1 - Etica</a><span class="badge html">HTML</span></li>
-  <li><time datetime="2022-05-07T07:29:12-05:00">2022-05-07</time><a href="Seminario_Etica.html">Seminario Investigación - Sesión 1 - Etica</a><span class="badge html">HTML</span></li>
-</ul>
-<h2>2019</h2>
-<ul>
-  <li><time datetime="2019-10-08T13:16:20-05:00">2019-10-08</time><a href="Clase_4_Mcdo_Laboral.pptx">Clase_4_Mcdo_Laboral</a><span class="badge pptx">PPTX</span></li>
-  <li><time datetime="2019-10-08T13:16:20-05:00">2019-10-08</time><a href="Resultados_RAP.pdf">Resultados_RAP</a><span class="badge pdf">PDF</span></li>
-  <li><time datetime="2019-09-25T13:55:19-05:00">2019-09-25</time><a href="Antioquia.pdf">Antioquia</a><span class="badge pdf">PDF</span></li>
-  <li><time datetime="2019-08-20T13:10:52-05:00">2019-08-20</time><a href="inflacion.pptx">inflacion</a><span class="badge pptx">PPTX</span></li>
-  <li><time datetime="2019-08-20T11:39:35-05:00">2019-08-20</time><a href="venezuela.pptx">venezuela</a><span class="badge pptx">PPTX</span></li>
-  <li><time datetime="2019-08-13T11:58:38-05:00">2019-08-13</time><a href="venezuela.pdf">venezuela</a><span class="badge pdf">PDF</span></li>
-  <li><time datetime="2019-07-18T17:48:22-05:00">2019-07-18</time><a href="hist.pdf">hist</a><span class="badge pdf">PDF</span></li>
-  <li><time datetime="2019-07-18T17:48:22-05:00">2019-07-18</time><a href="Seminario_Alternativo.html">Seminario Investigación - Sesión 3 - Alternativos</a><span class="badge html">HTML</span></li>
-  <li><time datetime="2019-07-18T17:48:22-05:00">2019-07-18</time><a href="lecture_5.html">GIS for Applied Economics</a><span class="badge html">HTML</span></li>
-  <li><time datetime="2019-07-18T17:48:22-05:00">2019-07-18</time><a href="Part_3.html">GIS for Applied Economics</a><span class="badge html">HTML</span></li>
-  <li><time datetime="2019-07-18T17:48:22-05:00">2019-07-18</time><a href="Part_2.html">GIS for Applied Economics</a><span class="badge html">HTML</span></li>
-  <li><time datetime="2019-07-18T17:48:22-05:00">2019-07-18</time><a href="Part_1.html">GIS for Applied Economics</a><span class="badge html">HTML</span></li>
-  <li><time datetime="2019-07-18T13:27:53-05:00">2019-07-18</time><a href="Clase_1.pptx">Clase_1</a><span class="badge pptx">PPTX</span></li>
-  <li><time datetime="2019-07-18T13:27:53-05:00">2019-07-18</time><a href="Clase_1_equipos.pptx">Clase_1_equipos</a><span class="badge pptx">PPTX</span></li>
-  <li><time datetime="2019-07-17T08:07:50-05:00">2019-07-17</time><a href="Lecture_01.html">Economic Growth and Development -  Lecture 1</a><span class="badge html">HTML</span></li>
-</ul>
-<h2>2018</h2>
-<ul>
-  <li><time datetime="2018-12-05T06:49:28-05:00">2018-12-05</time><a href="2018_ids_members.html">Reassessing Economic Inequality and Development</a><span class="badge html">HTML</span></li>
-  <li><time datetime="2018-12-04T14:52:00-05:00">2018-12-04</time><a href="pdfs/lecture_5.pdf">lecture_5</a><span class="badge pdf">PDF</span></li>
-  <li><time datetime="2018-12-04T14:52:00-05:00">2018-12-04</time><a href="pdfs/lecture_4.pdf">lecture_4</a><span class="badge pdf">PDF</span></li>
-  <li><time datetime="2018-12-04T14:52:00-05:00">2018-12-04</time><a href="pdfs/lecture_3.pdf">lecture_3</a><span class="badge pdf">PDF</span></li>
-  <li><time datetime="2018-12-04T14:52:00-05:00">2018-12-04</time><a href="pdfs/lecture_2.pdf">lecture_2</a><span class="badge pdf">PDF</span></li>
-  <li><time datetime="2018-12-04T14:52:00-05:00">2018-12-04</time><a href="pdfs/lecture_1.pdf">lecture_1</a><span class="badge pdf">PDF</span></li>
-</ul>
+  <div class="wrap">
+    <section class="year"><h2>2026</h2>
+<article class="card"
+ data-kind="propuesta" data-search="florece — sistema de monitoreo comfamiliar risaralda propuesta 2026-05-05  monitoreo y evaluación desarrollo territorial comfamiliar_florece">
+<div class="when"><time datetime="2026-05-05">2026-05-05</time></div>
+<div class="body">
+<h3><a href="comfamiliar_florece.html">FLORECE — Sistema de Monitoreo</a></h3>
+<p class="meta"><span class="kind">Propuesta</span> <span aria-hidden="true">·</span> Comfamiliar Risaralda</p>
+<p class="tags">monitoreo y evaluación · desarrollo territorial</p>
+</div>
+<div class="actions"><a class="btn primary" href="comfamiliar_florece.html">Abrir</a></div>
+</article>
+</section>
+<section class="year"><h2>2022</h2>
+<article class="card"
+ data-kind="seminario" data-search="seminario de investigación — visualización universidad eafit seminario 2022-05-07   seminario_visualization">
+<div class="when"><time datetime="2022-05-07">2022-05-07</time></div>
+<div class="body">
+<h3><a href="Seminario_Visualization.html">Seminario de Investigación — Visualización</a></h3>
+<p class="meta"><span class="kind">Seminario</span> <span aria-hidden="true">·</span> Universidad EAFIT</p>
+</div>
+<div class="actions"><a class="btn primary" href="Seminario_Visualization.html">Abrir</a></div>
+</article>
+<article class="card"
+ data-kind="seminario" data-search="seminario de investigación — ética universidad eafit seminario 2022-05-07   seminario_etica">
+<div class="when"><time datetime="2022-05-07">2022-05-07</time></div>
+<div class="body">
+<h3><a href="Seminario_Etica.html">Seminario de Investigación — Ética</a></h3>
+<p class="meta"><span class="kind">Seminario</span> <span aria-hidden="true">·</span> Universidad EAFIT</p>
+</div>
+<div class="actions"><a class="btn primary" href="Seminario_Etica.html">Abrir</a></div>
+</article>
+</section>
+<section class="year"><h2>2019</h2>
+<article class="card"
+ data-kind="otro" data-search="resultados rap  otro 2019-10-08   resultados_rap">
+<div class="when"><time datetime="2019-10-08">2019-10-08</time></div>
+<div class="body">
+<h3><a href="Resultados_RAP.pdf">Resultados RAP</a></h3>
+<p class="meta"><span class="kind">Otro</span></p>
+</div>
+<div class="actions"><a class="btn" href="Resultados_RAP.pdf" download>PDF</a></div>
+</article>
+<article class="card"
+ data-kind="clase" data-search="clase 4 — mercado laboral  clase 2019-10-08   clase_4_mcdo_laboral">
+<div class="when"><time datetime="2019-10-08">2019-10-08</time></div>
+<div class="body">
+<h3><a href="Clase_4_Mcdo_Laboral.pptx">Clase 4 — Mercado laboral</a></h3>
+<p class="meta"><span class="kind">Clase</span></p>
+</div>
+<div class="actions"><a class="btn" href="Clase_4_Mcdo_Laboral.pptx" download>PPTX</a></div>
+</article>
+<article class="card"
+ data-kind="otro" data-search="antioquia  otro 2019-09-25   antioquia">
+<div class="when"><time datetime="2019-09-25">2019-09-25</time></div>
+<div class="body">
+<h3><a href="Antioquia.pdf">Antioquia</a></h3>
+<p class="meta"><span class="kind">Otro</span></p>
+</div>
+<div class="actions"><a class="btn" href="Antioquia.pdf" download>PDF</a></div>
+</article>
+<article class="card"
+ data-kind="otro" data-search="inflación  otro 2019-08-20   inflacion">
+<div class="when"><time datetime="2019-08-20">2019-08-20</time></div>
+<div class="body">
+<h3><a href="inflacion.pptx">Inflación</a></h3>
+<p class="meta"><span class="kind">Otro</span></p>
+</div>
+<div class="actions"><a class="btn" href="inflacion.pptx" download>PPTX</a></div>
+</article>
+<article class="card"
+ data-kind="otro" data-search="venezuela  otro 2019-08-13   venezuela">
+<div class="when"><time datetime="2019-08-13">2019-08-13</time></div>
+<div class="body">
+<h3><a href="venezuela.pdf">Venezuela</a></h3>
+<p class="meta"><span class="kind">Otro</span></p>
+</div>
+<div class="actions"><a class="btn" href="venezuela.pdf" download>PDF</a><a class="btn" href="venezuela.pptx" download>PPTX</a></div>
+</article>
+<article class="card"
+ data-kind="clase" data-search="gis for applied economics — lecture 5 gis for applied economics clase 2019-07-18   lecture_5">
+<div class="when"><time datetime="2019-07-18">2019-07-18</time></div>
+<div class="body">
+<h3><a href="lecture_5.html">GIS for Applied Economics — Lecture 5</a></h3>
+<p class="meta"><span class="kind">Clase</span> <span aria-hidden="true">·</span> GIS for Applied Economics</p>
+</div>
+<div class="actions"><a class="btn primary" href="lecture_5.html">Abrir</a><a class="btn" href="pdfs/lecture_5.pdf" download>PDF</a></div>
+</article>
+<article class="card"
+ data-kind="otro" data-search="hist  otro 2019-07-18   hist">
+<div class="when"><time datetime="2019-07-18">2019-07-18</time></div>
+<div class="body">
+<h3><a href="hist.pdf">Hist</a></h3>
+<p class="meta"><span class="kind">Otro</span></p>
+</div>
+<div class="actions"><a class="btn" href="hist.pdf" download>PDF</a></div>
+</article>
+<article class="card"
+ data-kind="seminario" data-search="seminario de investigación — métodos alternativos universidad eafit seminario 2019-07-18   seminario_alternativo">
+<div class="when"><time datetime="2019-07-18">2019-07-18</time></div>
+<div class="body">
+<h3><a href="Seminario_Alternativo.html">Seminario de Investigación — Métodos alternativos</a></h3>
+<p class="meta"><span class="kind">Seminario</span> <span aria-hidden="true">·</span> Universidad EAFIT</p>
+</div>
+<div class="actions"><a class="btn primary" href="Seminario_Alternativo.html">Abrir</a></div>
+</article>
+<article class="card"
+ data-kind="clase" data-search="gis for applied economics — parte 3 gis for applied economics clase 2019-07-18   part_3">
+<div class="when"><time datetime="2019-07-18">2019-07-18</time></div>
+<div class="body">
+<h3><a href="Part_3.html">GIS for Applied Economics — Parte 3</a></h3>
+<p class="meta"><span class="kind">Clase</span> <span aria-hidden="true">·</span> GIS for Applied Economics</p>
+</div>
+<div class="actions"><a class="btn primary" href="Part_3.html">Abrir</a></div>
+</article>
+<article class="card"
+ data-kind="clase" data-search="gis for applied economics — parte 2 gis for applied economics clase 2019-07-18   part_2">
+<div class="when"><time datetime="2019-07-18">2019-07-18</time></div>
+<div class="body">
+<h3><a href="Part_2.html">GIS for Applied Economics — Parte 2</a></h3>
+<p class="meta"><span class="kind">Clase</span> <span aria-hidden="true">·</span> GIS for Applied Economics</p>
+</div>
+<div class="actions"><a class="btn primary" href="Part_2.html">Abrir</a></div>
+</article>
+<article class="card"
+ data-kind="clase" data-search="gis for applied economics — parte 1 gis for applied economics clase 2019-07-18   part_1">
+<div class="when"><time datetime="2019-07-18">2019-07-18</time></div>
+<div class="body">
+<h3><a href="Part_1.html">GIS for Applied Economics — Parte 1</a></h3>
+<p class="meta"><span class="kind">Clase</span> <span aria-hidden="true">·</span> GIS for Applied Economics</p>
+</div>
+<div class="actions"><a class="btn primary" href="Part_1.html">Abrir</a></div>
+</article>
+<article class="card"
+ data-kind="clase" data-search="clase 1 — equipos  clase 2019-07-18   clase_1_equipos">
+<div class="when"><time datetime="2019-07-18">2019-07-18</time></div>
+<div class="body">
+<h3><a href="Clase_1_equipos.pptx">Clase 1 — Equipos</a></h3>
+<p class="meta"><span class="kind">Clase</span></p>
+</div>
+<div class="actions"><a class="btn" href="Clase_1_equipos.pptx" download>PPTX</a></div>
+</article>
+<article class="card"
+ data-kind="clase" data-search="clase 1  clase 2019-07-18   clase_1">
+<div class="when"><time datetime="2019-07-18">2019-07-18</time></div>
+<div class="body">
+<h3><a href="Clase_1.pptx">Clase 1</a></h3>
+<p class="meta"><span class="kind">Clase</span></p>
+</div>
+<div class="actions"><a class="btn" href="Clase_1.pptx" download>PPTX</a></div>
+</article>
+<article class="card"
+ data-kind="clase" data-search="economic growth and development — lecture 1 economic growth and development clase 2019-07-17   lecture_01">
+<div class="when"><time datetime="2019-07-17">2019-07-17</time></div>
+<div class="body">
+<h3><a href="Lecture_01.html">Economic Growth and Development — Lecture 1</a></h3>
+<p class="meta"><span class="kind">Clase</span> <span aria-hidden="true">·</span> Economic Growth and Development</p>
+</div>
+<div class="actions"><a class="btn primary" href="Lecture_01.html">Abrir</a></div>
+</article>
+</section>
+<section class="year"><h2>2018</h2>
+<article class="card"
+ data-kind="charla" data-search="reassessing economic inequality and development institute of development studies, sussex charla 2018-12-05   2018_ids_members">
+<div class="when"><time datetime="2018-12-05">2018-12-05</time></div>
+<div class="body">
+<h3><a href="2018_ids_members.html">Reassessing Economic Inequality and Development</a></h3>
+<p class="meta"><span class="kind">Charla</span> <span aria-hidden="true">·</span> Institute of Development Studies, Sussex</p>
+</div>
+<div class="actions"><a class="btn primary" href="2018_ids_members.html">Abrir</a></div>
+</article>
+<article class="card"
+ data-kind="clase" data-search="lecture 4  clase 2018-12-04   lecture_4">
+<div class="when"><time datetime="2018-12-04">2018-12-04</time></div>
+<div class="body">
+<h3><a href="pdfs/lecture_4.pdf">Lecture 4</a></h3>
+<p class="meta"><span class="kind">Clase</span></p>
+</div>
+<div class="actions"><a class="btn" href="pdfs/lecture_4.pdf" download>PDF</a></div>
+</article>
+<article class="card"
+ data-kind="clase" data-search="lecture 3  clase 2018-12-04   lecture_3">
+<div class="when"><time datetime="2018-12-04">2018-12-04</time></div>
+<div class="body">
+<h3><a href="pdfs/lecture_3.pdf">Lecture 3</a></h3>
+<p class="meta"><span class="kind">Clase</span></p>
+</div>
+<div class="actions"><a class="btn" href="pdfs/lecture_3.pdf" download>PDF</a></div>
+</article>
+<article class="card"
+ data-kind="clase" data-search="lecture 2  clase 2018-12-04   lecture_2">
+<div class="when"><time datetime="2018-12-04">2018-12-04</time></div>
+<div class="body">
+<h3><a href="pdfs/lecture_2.pdf">Lecture 2</a></h3>
+<p class="meta"><span class="kind">Clase</span></p>
+</div>
+<div class="actions"><a class="btn" href="pdfs/lecture_2.pdf" download>PDF</a></div>
+</article>
+<article class="card"
+ data-kind="clase" data-search="lecture 1  clase 2018-12-04   lecture_1">
+<div class="when"><time datetime="2018-12-04">2018-12-04</time></div>
+<div class="body">
+<h3><a href="pdfs/lecture_1.pdf">Lecture 1</a></h3>
+<p class="meta"><span class="kind">Clase</span></p>
+</div>
+<div class="actions"><a class="btn" href="pdfs/lecture_1.pdf" download>PDF</a></div>
+</article>
+</section>
+    <p class="empty" id="empty">Ninguna presentación coincide con la búsqueda.</p>
+  </div>
 </main>
+
 <footer>
-  <p>24 presentaciones · Última actualización: 2026-05-05T12:57:30Z · <a href="https://github.com/jcmunozmora/slides">github.com/jcmunozmora/slides</a></p>
+  <div class="wrap">
+    <p>22 presentaciones · actualizado 2026-09-11</p>
+    <p><a href="https://github.com/jcmunozmora/slides">github.com/jcmunozmora/slides</a></p>
+  </div>
 </footer>
+<script>
+(function(){
+  var q = document.getElementById('q');
+  var chips = Array.prototype.slice.call(document.querySelectorAll('.chip'));
+  var cards = Array.prototype.slice.call(document.querySelectorAll('.card'));
+  var years = Array.prototype.slice.call(document.querySelectorAll('section.year'));
+  var empty = document.getElementById('empty');
+  var kind = 'all';
+
+  function apply(){
+    var term = (q.value || '').trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function(c){
+      var okKind = (kind === 'all') || (c.dataset.kind === kind);
+      var okTerm = !term || c.dataset.search.indexOf(term) !== -1;
+      var on = okKind && okTerm;
+      c.hidden = !on;
+      if (on) shown++;
+    });
+    years.forEach(function(s){
+      s.hidden = !s.querySelector('.card:not([hidden])');
+    });
+    empty.classList.toggle('on', shown === 0);
+  }
+
+  q.addEventListener('input', apply);
+  chips.forEach(function(ch){
+    ch.addEventListener('click', function(){
+      kind = ch.dataset.kind;
+      chips.forEach(function(o){ o.setAttribute('aria-pressed', String(o === ch)); });
+      apply();
+    });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === '/' && document.activeElement !== q){ e.preventDefault(); q.focus(); }
+    if (e.key === 'Escape' && document.activeElement === q){ q.value = ''; apply(); }
+  });
+})();
+</script>
 </body>
 </html>
