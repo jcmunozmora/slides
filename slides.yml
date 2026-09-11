@@ -47,37 +47,6 @@ presentations:
   event: Universidad EAFIT
   lang: es
   html: Seminario_Etica.html
-- slug: Resultados_RAP
-  title: Resultados RAP
-  date: '2019-10-08'
-  kind: otro
-  lang: es
-  pdf: Resultados_RAP.pdf
-- slug: Clase_4_Mcdo_Laboral
-  title: Clase 4 — Mercado laboral
-  date: '2019-10-08'
-  kind: clase
-  lang: es
-  pptx: Clase_4_Mcdo_Laboral.pptx
-- slug: Antioquia
-  title: Antioquia
-  date: '2019-09-25'
-  kind: otro
-  lang: es
-  pdf: Antioquia.pdf
-- slug: inflacion
-  title: Inflación
-  date: '2019-08-20'
-  kind: otro
-  lang: es
-  pptx: inflacion.pptx
-- slug: venezuela
-  title: Venezuela
-  date: '2019-08-13'
-  kind: otro
-  lang: es
-  pdf: venezuela.pdf
-  pptx: venezuela.pptx
 - slug: lecture_5
   title: GIS for Applied Economics — Lecture 5
   date: '2019-07-18'
@@ -120,18 +89,6 @@ presentations:
   event: GIS for Applied Economics
   lang: en
   html: Part_1.html
-- slug: Clase_1_equipos
-  title: Clase 1 — Equipos
-  date: '2019-07-18'
-  kind: clase
-  lang: es
-  pptx: Clase_1_equipos.pptx
-- slug: Clase_1
-  title: Clase 1
-  date: '2019-07-18'
-  kind: clase
-  lang: es
-  pptx: Clase_1.pptx
 - slug: Lecture_01
   title: Economic Growth and Development — Lecture 1
   date: '2019-07-17'
@@ -146,27 +103,3 @@ presentations:
   event: Institute of Development Studies, Sussex
   lang: en
   html: 2018_ids_members.html
-- slug: lecture_4
-  title: Lecture 4
-  date: '2018-12-04'
-  kind: clase
-  lang: en
-  pdf: pdfs/lecture_4.pdf
-- slug: lecture_3
-  title: Lecture 3
-  date: '2018-12-04'
-  kind: clase
-  lang: en
-  pdf: pdfs/lecture_3.pdf
-- slug: lecture_2
-  title: Lecture 2
-  date: '2018-12-04'
-  kind: clase
-  lang: en
-  pdf: pdfs/lecture_2.pdf
-- slug: lecture_1
-  title: Lecture 1
-  date: '2018-12-04'
-  kind: clase
-  lang: en
-  pdf: pdfs/lecture_1.pdf
