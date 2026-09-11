@@ -23,6 +23,19 @@
 # metadatos derivados del disco. Correr con --seed le escribe su ficha.
 
 presentations:
+- slug: 2026-09_amb-bucaramanga-catastro
+  title: Del catastro habilitado al catastro que financia el desarrollo
+  date: '2026-09-11'
+  kind: policy
+  event: Área Metropolitana de Bucaramanga
+  lang: es
+  html: decks/2026-09_amb-bucaramanga-catastro/index.html
+  tags:
+  - catastro multipropósito
+  - finanzas públicas territoriales
+  - impuesto predial
+  - desarrollo territorial
+  note: Capacidades del Centro de Valor Público en gestión catastral y capacidad fiscal subnacional
 - slug: comfamiliar_florece
   title: FLORECE — Sistema de Monitoreo
   date: '2026-05-05'
