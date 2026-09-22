@@ -23,6 +23,19 @@
 # metadatos derivados del disco. Correr con --seed le escribe su ficha.
 
 presentations:
+- slug: 2026-09_retro-a2-datos-problema
+  title: Lo que nos dijeron los datos
+  date: '2026-09-22'
+  kind: clase
+  event: Gestión de la Información y Gobernanza de Datos — Universidad EAFIT
+  lang: es
+  html: decks/2026-09_retro-a2-datos-problema/index.html
+  tags:
+  - gobernanza de datos
+  - estadística descriptiva
+  - verificación de fuentes
+  - docencia
+  note: Retroalimentación de la Entrega 2 — cómo un gráfico miente y qué significa verificar una cifra
 - slug: 2026-09_amb-bucaramanga-catastro
   title: Del catastro habilitado al catastro que financia el desarrollo
   date: '2026-09-11'
