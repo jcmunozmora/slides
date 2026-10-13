@@ -23,6 +23,16 @@
 # metadatos derivados del disco. Correr con --seed le escribe su ficha.
 
 presentations:
+- slug: 2026-10_hub-conexion-juvenil
+  title: El techo de la IA es tu criterio
+  date: '2026-10-14'
+  kind: seminario
+  event: Comunidad de práctica #7 · HUB Conexión Juvenil (Fondation Botnar, Fundación Corona, Centro de Valor Público EAFIT)
+  lang: es
+  html: decks/2026-10_hub-conexion-juvenil/index.html
+  pdf: decks/2026-10_hub-conexion-juvenil/slides.pdf
+  tags: [inteligencia artificial, juventudes, herramientas digitales, RAFA]
+  note: Taller con jóvenes gestores. En la misma carpeta están el recetario de cocina para la IA (recetario-cocina.pdf) y el banco de herramientas (banco-herramientas.pdf).
 - slug: 2026-09_retro-a2-datos-problema
   title: Lo que nos dijeron los datos
   date: '2026-09-22'
