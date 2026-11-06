@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Mesa Empresarial Bajo Cauca y Alto Nordeste · Mesa 0</title>
+<style>
+@font-face{font-family:"Montserrat";src:url("fonts/Montserrat-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Montserrat";src:url("fonts/Montserrat-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Montserrat";src:url("fonts/Montserrat-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Montserrat";src:url("fonts/Montserrat-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+:root{--magenta:#EC297B;--azul:#003A70;--turquesa:#00B3A6;--tinta:#1F2937;--gris:#4B5563;--borde:#E5E7EB;--fondo:#FFFFFF;--suave:#F7F8FA}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--fondo);color:var(--tinta);font-family:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%}
+.franja{height:6px;background:linear-gradient(90deg,var(--magenta) 0 50%,var(--turquesa) 50% 100%)}
+.pagina{max-width:720px;margin:0 auto;padding:20px 20px 32px}
+header .logos{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:24px}
+header .logos img{height:34px;width:auto;max-width:46%}
+h1{font-size:1.55rem;line-height:1.2;font-weight:700;color:var(--azul);margin:0 0 6px}
+.sub{font-size:.95rem;font-weight:600;color:var(--magenta);margin:0 0 6px}
+.lead{color:var(--gris);margin:0 0 24px;font-size:.95rem}
+.tarjetas{display:grid;grid-template-columns:1fr;gap:14px}
+.tarjeta{border:1px solid var(--borde);border-radius:12px;padding:18px 18px 16px;background:var(--fondo);border-left:5px solid var(--turquesa)}
+.tarjeta.activa{border-left-color:var(--magenta)}
+.tarjeta h2{font-size:1.05rem;font-weight:600;margin:0 0 6px;color:var(--azul)}
+.tarjeta p{margin:0 0 12px;color:var(--gris);font-size:.93rem}
+.tarjeta p:last-child{margin-bottom:0}
+.boton{display:inline-block;background:var(--magenta);color:#fff;text-decoration:none;font-weight:600;padding:12px 18px;border-radius:8px;font-size:.95rem;min-height:44px;line-height:20px}
+.boton:hover,.boton:focus{background:#C81F66;outline:none}
+.boton:focus-visible{outline:3px solid var(--turquesa);outline-offset:2px}
+.estado{display:inline-block;background:var(--suave);color:var(--gris);border:1px dashed var(--borde);padding:8px 12px;border-radius:8px;font-size:.88rem;font-weight:500}
+.lista{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.pendiente{display:none}
+.boton.secundario{background:var(--azul)}
+.boton.secundario:hover,.boton.secundario:focus{background:#002A52}
+.meta{font-size:.8rem;color:var(--gris);margin-top:6px}
+footer{margin-top:36px;padding-top:22px;border-top:1px solid var(--borde)}
+footer h3{font-size:.95rem;font-weight:600;color:var(--azul);margin:0 0 4px}
+footer .quien{font-size:.88rem;color:var(--gris);margin:0 0 16px}
+.contacto{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:360px}
+.qr{text-align:center}
+.qr img{width:100%;max-width:160px;height:auto;display:block;margin:0 auto 6px;background:#fff;border:1px solid var(--borde);border-radius:6px}
+.qr span{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.82rem;color:var(--tinta)}
+.texto{margin-top:14px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88rem;line-height:1.7}
+.texto a{color:var(--azul);text-decoration:none;border-bottom:1px solid var(--turquesa);word-break:break-all}
+@media (min-width:600px){
+  .pagina{padding:32px 24px 48px}
+  h1{font-size:2rem}
+  header .logos img{height:44px}
+  .tarjetas{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="franja" role="presentation"></div>
+<div class="pagina">
+<header>
+  <div class="logos">
+    <img src="figs/logo_comfama.png" alt="Comfama">
+    <img src="figs/logo_vp.png" alt="Centro de Valor Público, Universidad EAFIT">
+  </div>
+  <p class="sub">Mesa 0 · 6 de noviembre de 2026</p>
+  <h1>Mesa Empresarial Bajo Cauca y Alto Nordeste</h1>
+  <p class="lead">Aquí dejamos lo que usamos hoy y lo que sale de la sesión. Guarda esta página: la vamos a actualizar.</p>
+</header>
+
+<main class="tarjetas">
+  <section class="tarjeta activa">
+    <h2>La presentación</h2>
+    <p>Las láminas que vemos en la sesión de hoy.</p>
+    <a class="boton" href="presentacion.pdf">Abrir la presentación (PDF)</a>
+  </section>
+
+  <section class="tarjeta" id="hojas">
+    <h2>Las dos hojas de la sesión</h2>
+    <p>Las dos hojas impresas que recibes hoy, en PDF.</p>
+    <span class="estado">Disponibles al cierre de la sesión</span>
+    <!-- Para activar: quitar la clase "pendiente" de la lista y borrar el <span class="estado"> de arriba. -->
+    <ul class="lista pendiente">
+      <li><a class="boton secundario" href="hoja-1-quienes-nos-sentamos.pdf">Hoja 1 · Quiénes nos sentamos</a></li>
+      <li><a class="boton secundario" href="hoja-2-lo-que-acordamos.pdf">Hoja 2 · Lo que acordamos</a></li>
+    </ul>
+  </section>
+
+  <section class="tarjeta" id="ruta">
+    <h2>La ruta de acción</h2>
+    <p>El plan de trabajo que construimos hoy, ya consolidado.</p>
+    <span class="estado">La publicamos aquí en 48 horas</span>
+    <!-- Para activar: quitar la clase "pendiente" y borrar el <span class="estado"> de arriba. -->
+    <p class="pendiente"><a class="boton secundario" href="ruta-de-accion.pdf">Abrir la ruta de acción (PDF)</a></p>
+  </section>
+</main>
+
+<footer>
+  <h3>Sigamos la conversación</h3>
+  <p class="quien">Juan Carlos Muñoz-Mora · Centro de Valor Público, Universidad EAFIT</p>
+  <div class="contacto">
+    <div class="qr">
+      <img src="figs/qr_linkedin_deck_mesa-bc-ne-2026.svg" alt="Código QR al perfil de LinkedIn">
+      <span>LinkedIn</span>
+    </div>
+    <div class="qr">
+      <img src="figs/qr_email_deck_mesa-bc-ne-2026.svg" alt="Código QR para escribir un correo">
+      <span>Escríbeme</span>
+    </div>
+  </div>
+  <p class="texto">
+    <a href="mailto:jmunozm1@eafit.edu.co?subject=Mesa%20empresarial%20Bajo%20Cauca%20y%20Alto%20Nordeste%20%C2%B7%20nov%202026">jmunozm1@eafit.edu.co</a><br>
+    <a href="https://jcmunozmora.co">jcmunozmora.co</a>
+  </p>
+</footer>
+</div>
+</body>
+</html>

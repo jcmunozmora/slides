@@ -23,6 +23,17 @@
 # metadatos derivados del disco. Correr con --seed le escribe su ficha.
 
 presentations:
+- slug: 2026-11_mesa-bc-nordeste
+  title: Mesa Empresarial Bajo Cauca y Alto Nordeste · Mesa 0
+  date: '2026-11-06'
+  kind: policy
+  event: Mesa Empresarial de Prospectiva Territorial · Comfama y Centro de Valor Público EAFIT
+  lang: es
+  html: decks/2026-11_mesa-bc-nordeste/index.html
+  pdf: decks/2026-11_mesa-bc-nordeste/presentacion.pdf
+  tags: [desarrollo territorial, Bajo Cauca, Nordeste, prospectiva]
+  hidden: true
+  note: Página de la mesa para el QR de las hojas impresas; redirector corto en mesa-bc/. Al cierre se agregan las dos hojas y a las 48 h la ruta de acción.
 - slug: 2026-10_hub-conexion-juvenil
   title: El techo de la IA es tu criterio
   date: '2026-10-14'
