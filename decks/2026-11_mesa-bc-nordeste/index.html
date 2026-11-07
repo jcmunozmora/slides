@@ -62,14 +62,20 @@ footer .quien{font-size:.88rem;color:var(--gris);margin:0 0 16px}
   </div>
   <p class="sub">Mesa 0 · 6 de noviembre de 2026</p>
   <h1>Mesa Empresarial Bajo Cauca y Alto Nordeste</h1>
-  <p class="lead">Aquí dejamos lo que usamos hoy y lo que sale de la sesión. Guarda esta página: la vamos a actualizar.</p>
+  <p class="lead">Aquí dejamos lo que usamos en la sesión y lo que salió de ella. Guarda esta página: la vamos a actualizar.</p>
 </header>
 
 <main class="tarjetas">
   <section class="tarjeta activa">
     <h2>La presentación</h2>
-    <p>Las láminas que vemos en la sesión de hoy.</p>
+    <p>Las láminas que usamos en la sesión.</p>
     <a class="boton" href="presentacion.pdf">Abrir la presentación (PDF)</a>
+  </section>
+
+  <section class="tarjeta activa" id="acuerdos">
+    <h2>Los acuerdos, en un mapa vivo</h2>
+    <p>Lo que dibujamos del territorio, las seis líneas de trabajo, quién se compromete con qué y lo que falta para volverlo plan.</p>
+    <a class="boton" href="acuerdos/">Explorar los acuerdos</a>
   </section>
 
   <section class="tarjeta activa" id="whatsapp">
@@ -82,23 +88,22 @@ footer .quien{font-size:.88rem;color:var(--gris);margin:0 0 16px}
     </div>
   </section>
 
-  <section class="tarjeta" id="hojas">
+  <section class="tarjeta activa" id="hojas">
     <h2>Las dos hojas de la sesión</h2>
-    <p>Las dos hojas impresas que recibes hoy, en PDF.</p>
-    <span class="estado">Disponibles al cierre de la sesión</span>
-    <!-- Para activar: quitar la clase "pendiente" de la lista y borrar el <span class="estado"> de arriba. -->
-    <ul class="lista pendiente">
+    <p>Las dos hojas del cierre, en PDF. Es el plan preliminar: lo completamos con lo que confirme cada organización.</p>
+    <ul class="lista">
       <li><a class="boton secundario" href="hoja-1-quienes-nos-sentamos.pdf">Hoja 1 · Quiénes nos sentamos</a></li>
       <li><a class="boton secundario" href="hoja-2-lo-que-acordamos.pdf">Hoja 2 · Lo que acordamos</a></li>
     </ul>
   </section>
 
-  <section class="tarjeta" id="ruta">
-    <h2>La ruta de acción</h2>
-    <p>El plan de trabajo que construimos hoy, ya consolidado.</p>
-    <span class="estado">La publicamos aquí en 48 horas</span>
-    <!-- Para activar: quitar la clase "pendiente" y borrar el <span class="estado"> de arriba. -->
-    <p class="pendiente"><a class="boton secundario" href="ruta-de-accion.pdf">Abrir la ruta de acción (PDF)</a></p>
+  <section class="tarjeta activa" id="ruta">
+    <h2>Relatoría y hoja de ruta</h2>
+    <p>Lo que pasó en la sesión y las seis líneas con sus acciones. Cada organización confirma quién lidera, el plazo y el primer paso.</p>
+    <ul class="lista">
+      <li><a class="boton secundario" href="relatoria-mesa0.pdf">Relatoría de la Mesa 0 (PDF)</a></li>
+      <li><a class="boton secundario" href="hoja-de-ruta-preliminar.pdf">Hoja de ruta preliminar (PDF)</a></li>
+    </ul>
   </section>
 </main>
 

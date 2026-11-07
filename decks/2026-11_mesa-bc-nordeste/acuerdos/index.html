@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Los acuerdos de la Mesa · Bajo Cauca y Alto Nordeste</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="saltar" href="#lineas">Ir a las líneas de trabajo</a>
+<div class="pagina">
+
+<header class="cabecera">
+  <div class="logos">
+    <img src="../figs/logo_comfama.png" alt="Comfama">
+    <img src="../figs/logo_vp.png" alt="Centro de Valor Público, Universidad EAFIT">
+  </div>
+  <p class="kicker" id="kicker">Mesa 0</p>
+  <h1>Del territorio a los acuerdos</h1>
+  <p class="lead">Lo que dibujamos, lo que acordamos y lo que falta para volverlo plan. Mesa Empresarial Bajo Cauca y Alto Nordeste.</p>
+  <p class="sello" id="sello" hidden></p>
+  <div class="cifras" id="cifras" role="list"></div>
+</header>
+
+<section class="bloque" aria-labelledby="t-camino">
+  <h2 id="t-camino">Del mapa al plan</h2>
+  <p class="nota">Cada paso cuenta lo que quedó registrado en la sesión. El último dice cuánto falta.</p>
+  <ol class="camino" id="camino"></ol>
+</section>
+
+<nav class="filtros" aria-label="Filtros">
+  <div class="grupo" role="group" aria-label="Subregión">
+    <span class="etq">Subregión</span>
+    <button type="button" class="chip activo" data-sub="todas" aria-pressed="true">Las dos</button>
+    <button type="button" class="chip" data-sub="BC" aria-pressed="false"><i class="pt bc"></i>Bajo Cauca</button>
+    <button type="button" class="chip" data-sub="AN" aria-pressed="false"><i class="pt an"></i>Alto Nordeste</button>
+  </div>
+  <div class="grupo" role="group" aria-label="Capa del mapa" id="filtro-capas">
+    <span class="etq">Capa</span>
+  </div>
+</nav>
+
+<section class="bloque" aria-labelledby="t-mapa">
+  <h2 id="t-mapa">El territorio que dibujamos</h2>
+  <p class="nota" id="nota-mapa"></p>
+  <div class="dos">
+    <figure class="mapa">
+      <svg id="mapa" role="img" aria-labelledby="t-mapa"></svg>
+      <figcaption class="leyenda" id="leyenda-mapa"></figcaption>
+    </figure>
+    <figure class="barras">
+      <figcaption class="titulo-fig">Aportes por capa</figcaption>
+      <div class="leyenda"><span><i class="pt bc"></i>Bajo Cauca</span><span><i class="pt an"></i>Alto Nordeste</span></div>
+      <svg id="barras" role="img" aria-label="Aportes por capa y subregión"></svg>
+      <details class="tabla"><summary>Ver como tabla</summary><table id="tabla-capas"></table></details>
+    </figure>
+  </div>
+</section>
+
+<section class="bloque" aria-labelledby="t-aportes">
+  <h2 id="t-aportes">Lo que dijimos, tal cual</h2>
+  <p class="nota" id="nota-aportes"></p>
+  <ul class="aportes" id="aportes"></ul>
+  <button type="button" class="mas" id="ver-mas">Ver todos</button>
+</section>
+
+<section class="bloque" aria-labelledby="t-lineas" id="lineas">
+  <h2 id="t-lineas">Las líneas de trabajo</h2>
+  <p class="nota">Empezamos con cuatro líneas. En la sala creamos dos y renombramos una. Las acciones van como quedaron escritas.</p>
+  <div class="lineas" id="tarjetas"></div>
+</section>
+
+<section class="bloque" aria-labelledby="t-red">
+  <h2 id="t-red">Quién se compromete con qué</h2>
+  <p class="nota">Cada hilo une una organización con una línea donde la sala la nombró para liderar o acompañar una acción. Pasa el cursor o toca una organización.</p>
+  <figure class="red"><svg id="red" role="img" aria-labelledby="t-red"></svg></figure>
+</section>
+
+<section class="bloque" aria-labelledby="t-tiempo">
+  <h2 id="t-tiempo">Lo que sigue</h2>
+  <ol class="tiempo" id="tiempo"></ol>
+  <div class="carril" id="carril" hidden></div>
+</section>
+
+<section class="bloque" aria-labelledby="t-une">
+  <h2 id="t-une">Lo que nos une</h2>
+  <p class="nota" id="nota-une"></p>
+  <ul class="une" id="une"></ul>
+</section>
+
+<section class="bloque dato" id="dato" hidden></section>
+
+<footer class="pie">
+  <p id="fuentes"></p>
+  <p>Comfama y Valor Público, Universidad EAFIT · <a href="../">Volver a la página de la Mesa</a></p>
+</footer>
+</div>
+<div class="tip" id="tip" role="tooltip" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
